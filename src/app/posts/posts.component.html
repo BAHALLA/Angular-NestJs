@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Posts List </h1>
+  <table class="table table-striped">
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>PostedAt</th>
+      <th>UserId</th>
+      <th>Post Detail</th>
+    </tr>
+    <tr *ngFor="let post of posts">
+      <td >{{post.title}}</td>
+      <td>{{post.body}}</td>
+      <td>{{post.postedAt}}</td>
+      <td> {{post.userId}}</td>
+      <td><a [routerLink]="[post.userId]" >More info..</a></td>
+    </tr>
+  </table>
+</div>
